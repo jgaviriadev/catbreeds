@@ -41,9 +41,11 @@ class BreedInfoItem extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               const SizedBox(height: 2),
-              Text(
-                value,
-                style: AppTextStyles.textBlackStyle14.copyWith(color: valueColor),
+              Flexible(
+                child: Text(
+                  value,
+                  style: AppTextStyles.textBlackStyle14.copyWith(color: valueColor),
+                ),
               ),
             ],
           ),
