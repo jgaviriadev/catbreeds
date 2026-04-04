@@ -4,6 +4,7 @@ import 'package:cat_breeds/features/breeds/di/breed_di.dart';
 import 'package:cat_breeds/features/favorites/di/favorite_di.dart';
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:talker_flutter/talker_flutter.dart';
@@ -30,7 +31,13 @@ Future<void> initializeDependencies() async {
   // ============================================
   // Core Services
   // ============================================
-  sl.registerLazySingleton<Talker>(TalkerFlutter.init);
+  sl.registerLazySingleton<Talker>(() {
+    return TalkerFlutter.init(
+      settings: TalkerSettings(
+        enabled: kDebugMode,
+      ),
+    );
+  });
 
   final sharedPreferences = await SharedPreferences.getInstance();
   sl

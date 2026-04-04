@@ -1,5 +1,6 @@
 import 'package:cat_breeds/core/core.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:talker_dio_logger/talker_dio_logger.dart';
 import 'package:talker_flutter/talker_flutter.dart';
 
@@ -47,6 +48,7 @@ class ApiClient {
         TalkerDioLogger(
           talker: talker,
           settings: const TalkerDioLoggerSettings(
+            enabled: kDebugMode,
             printRequestHeaders: true,
             printResponseHeaders: true,
           ),
