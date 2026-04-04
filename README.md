@@ -1,3 +1,5 @@
+![Cat Breeds App](https://i.imgur.com/dRI1H3O.png)
+
 # Cat Breeds App 🐱
 
 Flutter sample application that consumes [The Cat API](https://documenter.getpostman.com/view/5578104/RWgqUxxh) to display information about different cat breeds.
