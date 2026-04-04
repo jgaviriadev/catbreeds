@@ -1,0 +1,71 @@
+{
+  "biometric": {
+    "type_fingerprint": "Huella Digital",
+    "type_face_id": "Face ID",
+    "not_available": "Autenticación biométrica no disponible",
+    "not_configured": "Autenticación biométrica no configurada",
+    "not_enrolled": "No hay biometrías registradas en el dispositivo",
+    "no_hardware": "No hay hardware biométrico disponible",
+    "hardware_unavailable": "Hardware biométrico temporalmente no disponible",
+    "reason": "Autentícate para acceder a la aplicación",
+    "authentication_failed": "Autenticación fallida",
+    "no_credentials": "No hay credenciales configuradas en el dispositivo",
+    "user_canceled": "Autenticación cancelada por el usuario",
+    "system_canceled": "Autenticación cancelada por el sistema",
+    "temporary_lockout": "Demasiados intentos. Intenta más tarde",
+    "locked_out": "Autenticación biométrica bloqueada. Usa autenticación alternativa",
+    "auth_in_progress": "Ya hay una autenticación en progreso",
+    "ui_unavailable": "Interfaz no disponible para autenticación",
+    "timeout": "Tiempo de autenticación agotado",
+    "fallback_requested": "Usuario solicitó método de autenticación alternativo",
+    "device_error": "Error del dispositivo durante la autenticación",
+    "unknown_error": "Ocurrió un error desconocido"
+  },
+  "splash": {
+    "app_title": "Cat Breeds"
+  },
+  "navigationBar": {
+    "first_option": "Razas",
+    "second_option": "Favoritos"
+  },
+  "breeds": {
+    "search_hint": "Buscar razas... (mínimo 3 letras)",
+    "search_no_results": "No se encontraron resultados para \"{}\"",
+    "empty_state": "No hay razas disponibles",
+    "error_title": "Algo salió mal",
+    "error_message": "No pudimos cargar la lista de felinos.\nPor favor, revisa tu conexión e\ninténtalo de nuevo.",
+    "retry_button": "Reintentar",
+    "see_more_button": "Ver más",
+    "intelligence_label": "INTEL. {}/5"
+  },
+  "breed_detail": {
+    "unknown_breed": "Raza Desconocida",
+    "unknown_origin": "Desconocido",
+    "years": "Años",
+    "intelligence": "INTELIGENCIA",
+    "adaptability": "ADAPTABILIDAD",
+    "vocalness": "VOCALIDAD",
+    "level_high": "Alto",
+    "level_medium": "Medio",
+    "level_low": "Bajo",
+    "title_prefix": "El",
+    "additional_info": "Información Adicional",
+    "affection_level": "Nivel de Afecto",
+    "child_friendly": "Amigable con Niños",
+    "dog_friendly": "Amigable con Perros",
+    "energy_level": "Nivel de Energía",
+    "grooming": "Cuidado",
+    "health_issues": "Problemas de Salud",
+    "shedding_level": "Nivel de Muda",
+    "social_needs": "Necesidades Sociales"
+  },
+  "favorites": {
+    "error_loading": "Error al cargar favoritos",
+    "empty_title": "Sin favoritos aún",
+    "empty_subtitle": "¡Comienza a agregar gatos a tus favoritos!"
+  },
+  "shared": {
+    "default_error_message": "Ocurrió un error",
+    "retry_button": "Reintentar"
+  }
+}

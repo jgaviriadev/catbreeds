@@ -1,0 +1,71 @@
+{
+  "biometric": {
+    "type_fingerprint": "Fingerprint",
+    "type_face_id": "Face ID",
+    "not_available": "Biometric authentication not available",
+    "not_configured": "Biometric authentication not configured",
+    "not_enrolled": "No biometrics enrolled on device",
+    "no_hardware": "No biometric hardware available",
+    "hardware_unavailable": "Biometric hardware temporarily unavailable",
+    "reason": "Authenticate to access the app",
+    "authentication_failed": "Authentication failed",
+    "no_credentials": "No credentials configured on device",
+    "user_canceled": "Authentication was canceled by user",
+    "system_canceled": "Authentication was canceled by system",
+    "temporary_lockout": "Too many attempts. Try again later",
+    "locked_out": "Biometric authentication is locked. Use alternate authentication",
+    "auth_in_progress": "Authentication already in progress",
+    "ui_unavailable": "UI not available for authentication",
+    "timeout": "Authentication timed out",
+    "fallback_requested": "User requested alternate authentication method",
+    "device_error": "Device error occurred during authentication",
+    "unknown_error": "An unknown error occurred"
+  },
+  "splash": {
+    "app_title": "Cat Breeds"
+  },
+  "navigationBar": {
+    "first_option": "Breeds",
+    "second_option": "Favorites"
+  },
+  "breeds": {
+    "search_hint": "Search breeds... (minimum 3 letters)",
+    "search_no_results": "No results found for \"{}\"",
+    "empty_state": "No breeds available",
+    "error_title": "Something went wrong",
+    "error_message": "We couldn't load the list of cats.\nPlease check your connection and\ntry again.",
+    "retry_button": "Retry",
+    "see_more_button": "See more",
+    "intelligence_label": "INTEL. {}/5"
+  },
+  "breed_detail": {
+    "unknown_breed": "Unknown Breed",
+    "unknown_origin": "Unknown",
+    "years": "Years",
+    "intelligence": "INTELLIGENCE",
+    "adaptability": "ADAPTABILITY",
+    "vocalness": "VOCALNESS",
+    "level_high": "High",
+    "level_medium": "Medium",
+    "level_low": "Low",
+    "title_prefix": "The",
+    "additional_info": "Additional Information",
+    "affection_level": "Affection Level",
+    "child_friendly": "Child Friendly",
+    "dog_friendly": "Dog Friendly",
+    "energy_level": "Energy Level",
+    "grooming": "Grooming",
+    "health_issues": "Health Issues",
+    "shedding_level": "Shedding Level",
+    "social_needs": "Social Needs"
+  },
+  "favorites": {
+    "error_loading": "Error loading favorites",
+    "empty_title": "No favorites yet",
+    "empty_subtitle": "Start adding cats to your favorites!"
+  },
+  "shared": {
+    "default_error_message": "An error occurred",
+    "retry_button": "Retry"
+  }
+}

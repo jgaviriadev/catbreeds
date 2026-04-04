@@ -1,0 +1,250 @@
+# ============================================================================
+# ANÁLISIS ESTÁTICO DE CÓDIGO - Flutter Starter
+# ============================================================================
+# Basado en very_good_analysis con reglas adicionales para mantener
+# código limpio, consistente y de alta calidad.
+
+include: package:very_good_analysis/analysis_options.yaml
+
+formatter:
+  page_width: 120
+  
+analyzer:
+  language:
+    strict-casts: false
+    strict-inference: false
+    strict-raw-types: false
+  
+  # Excluir archivos generados del análisis
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.gr.dart"
+    - "**/generated/**"
+    - "build/**"
+    - "lib/generated/**"
+  
+  # Configuración de errores
+  errors:
+    # Convertir algunos warnings en errores para forzar buenas prácticas
+    invalid_annotation_target: ignore
+    todo: ignore  # Permite TODOs en el código
+    deprecated_member_use_from_same_package: ignore
+    inference_failure_on_function_invocation: ignore
+    
+    # Errores de imports no usados
+    unused_import: error
+    unused_local_variable: error
+
+linter:
+  rules:
+    # ========================================================================
+    # REGLAS DE ESTILO Y FORMATO
+    # ========================================================================
+    
+    # Preferir comillas simples para strings
+    prefer_single_quotes: true
+    
+    # Usar trailing commas para mejor formato automático
+    require_trailing_commas: true
+    
+    # Ordenar imports alfabéticamente
+    directives_ordering: true
+    
+    # Líneas no deben ser muy largas (se maneja con formatter)
+    lines_longer_than_80_chars: false  # Deshabilitado, el formatter lo maneja
+    
+    # ========================================================================
+    # REGLAS DE DOCUMENTACIÓN
+    # ========================================================================
+    
+    # Documentar APIs públicas
+    public_member_api_docs: false  # Deshabilitado para starter, habilitar en producción
+  
+    # ========================================================================
+    # REGLAS DE NULL SAFETY
+    # ========================================================================
+    
+    # Usar ?? en lugar de if/else para valores por defecto
+    prefer_if_null_operators: true
+    prefer_null_aware_operators: true
+    prefer_null_aware_method_calls: true
+    
+    # Evitar null checks innecesarios
+    unnecessary_null_checks: true
+    unnecessary_nullable_for_final_variable_declarations: true
+    unnecessary_null_in_if_null_operators: true
+    
+    # ========================================================================
+    # REGLAS DE CONSTRUCTORES
+    # ========================================================================
+    
+    # Preferir const constructors cuando sea posible
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true
+    
+    # Usar key en constructores de widgets
+    use_key_in_widget_constructors: true
+    
+    # ========================================================================
+    # REGLAS DE FUNCIONES Y MÉTODOS
+    # ========================================================================
+    
+    # Evitar funciones demasiado largas (manejado por complejidad)
+    avoid_catches_without_on_clauses: false  # Permitir catch genéricos a veces
+    
+    # Usar async/await correctamente
+    await_only_futures: true
+    unawaited_futures: true
+    unnecessary_await_in_return: true
+    
+    # ========================================================================
+    # REGLAS DE VARIABLES Y PARÁMETROS
+    # ========================================================================
+    
+    # Permitir parámetros booleanos posicionales (más conciso)
+    avoid_positional_boolean_parameters: false
+    
+    # Preferir final para variables que no cambian
+    prefer_final_locals: true
+    prefer_final_in_for_each: true
+    prefer_final_fields: true
+    
+    # Usar var cuando el tipo es obvio
+    omit_local_variable_types: false  # Permitir tipos explícitos
+    
+    # ========================================================================
+    # REGLAS DE CLASES Y OBJETOS
+    # ========================================================================
+    
+    # Usar @override cuando corresponda
+    annotate_overrides: true
+    
+    # Evitar clases con solo miembros estáticos
+    avoid_classes_with_only_static_members: false  # Permitir para utility classes
+    
+    # Permitir clases abstractas con un solo método (útil para repositories e interfaces)
+    one_member_abstracts: false
+    
+    # ========================================================================
+    # REGLAS DE COLLECTIONS
+    # ========================================================================
+    
+    # Preferir collection literals
+    prefer_collection_literals: true
+    prefer_spread_collections: true
+    
+    # Usar métodos de colecciones apropiadamente
+    prefer_iterable_whereType: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    prefer_is_not_operator: true
+    
+    # ========================================================================
+    # REGLAS DE FLUTTER ESPECÍFICAS
+    # ========================================================================
+    
+    # Evitar widgets innecesarios
+    avoid_unnecessary_containers: true
+    sized_box_for_whitespace: true
+    use_full_hex_values_for_flutter_colors: true
+    
+    # Preferir SizedBox sobre Container vacío para espaciado
+    sized_box_shrink_expand: true
+    
+    # Usar widgets optimizados
+    use_colored_box: true
+    use_decorated_box: true
+    
+    # Ordenar propiedades de widgets
+    sort_child_properties_last: true
+    
+    # ========================================================================
+    # REGLAS DE RENDIMIENTO
+    # ========================================================================
+    
+    # Evitar operaciones costosas
+    avoid_slow_async_io: true
+    
+    # Usar tipos específicos en lugar de dynamic cuando sea posible
+    avoid_dynamic_calls: false  # Puede ser muy estricto, revisar caso por caso
+    
+    # ========================================================================
+    # REGLAS DE SEGURIDAD Y ERRORES
+    # ========================================================================
+    
+    # Evitar errores comunes
+    avoid_print: true  # Usar logger en su lugar
+    avoid_web_libraries_in_flutter: true
+    
+    # Manejo de errores apropiado
+    use_rethrow_when_possible: true
+    only_throw_errors: true
+    
+    # Evitar comparaciones de tipos innecesarias
+    avoid_type_to_string: true
+    
+    # ========================================================================
+    # REGLAS DE TESTING
+    # ========================================================================
+    
+    # Test específicas (aplicables en archivos de test)
+    test_types_in_equals: true
+    use_test_throws_matchers: true
+    
+    # ========================================================================
+    # REGLAS ADICIONALES RECOMENDADAS
+    # ========================================================================
+    
+    # Evitar shadowing de variables
+    no_duplicate_case_values: true
+    
+    # Usar literales en lugar de constructores cuando sea posible
+    unnecessary_brace_in_string_interps: true
+    unnecessary_string_interpolations: true
+    unnecessary_string_escapes: true
+    
+    # Usar nombres descriptivos
+    non_constant_identifier_names: true
+    constant_identifier_names: true
+    
+    # Evitar imports relativos para archivos del mismo paquete
+    avoid_relative_lib_imports: true
+    
+    # Preferir generic function type aliases
+    prefer_generic_function_type_aliases: true
+    
+    # Usar raw strings para RegExp
+    use_raw_strings: true
+    
+    # Evitar setters sin getters correspondientes
+    avoid_setters_without_getters: true
+    
+    # Usar super parameters cuando sea posible (Dart 2.17+)
+    use_super_parameters: true
+    
+    # Evitar constructores redundantes de campos
+    unnecessary_constructor_name: true
+    
+    # Optimizaciones adicionales
+    unnecessary_const: true
+    unnecessary_new: true
+    unnecessary_this: true
+    unnecessary_parenthesis: true
+    unnecessary_late: true
+    unnecessary_lambdas: true
+    unnecessary_overrides: true
+    
+    # Mejor legibilidad
+    cascade_invocations: true
+    prefer_adjacent_string_concatenation: true
+    prefer_interpolation_to_compose_strings: true
+    
+    # Evitar problemas comunes
+    avoid_redundant_argument_values: false
+    avoid_returning_this: true
+    avoid_void_async: true
+    discarded_futures: true
+    sort_constructors_first: false
