@@ -50,8 +50,6 @@
 		<true/>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
-		<key>NSFaceIDUsageDescription</key>
-		<string>La aplicación necesita usar Face ID para autenticación biométrica</string>
 		<key>UIStatusBarHidden</key>
 		<true/>
 		<key>UIViewControllerBasedStatusBarAppearance</key>
