@@ -141,7 +141,7 @@ class ApiClient {
       final hasConnection = await networkService!.hasInternetConnection();
       if (!hasConnection) {
         throw ConnectionException(
-          message: 'No hay conexión a internet. Verifica tu red.',
+          message: 'No internet connection. Please check your network.',
         );
       }
     }
