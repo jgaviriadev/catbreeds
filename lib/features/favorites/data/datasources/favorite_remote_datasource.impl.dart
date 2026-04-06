@@ -11,7 +11,7 @@ class FavoriteRemoteDatasourceImpl implements FavoriteDatasource {
 
   @override
   Future<List<FavoriteModel>> getFavorites() async {
-    final response = await _apiClient.dio.get('/favourites');
+    final response = await _apiClient.get('/favourites');
     return List<FavoriteModel>.from(
       (response.data as List).map((e) => FavoriteModel.fromMap(e as Map<String, dynamic>)),
     );
@@ -19,16 +19,16 @@ class FavoriteRemoteDatasourceImpl implements FavoriteDatasource {
 
   @override
   Future<AddFavoriteResponseModel> addFavorite(AddFavoriteRequestModel request) async {
-    final response = await _apiClient.dio.post(
+    final response = await _apiClient.post(
       '/favourites',
-      data: request.toMap(),
+      query: request.toMap(),
     );
     return AddFavoriteResponseModel.fromMap(response.data as Map<String, dynamic>);
   }
 
   @override
   Future<DeleteFavoriteResponseModel> deleteFavorite(int favoriteId) async {
-    final response = await _apiClient.dio.delete('/favourites/$favoriteId');
+    final response = await _apiClient.delete('/favourites/$favoriteId');
     return DeleteFavoriteResponseModel.fromMap(response.data as Map<String, dynamic>);
   }
 }
